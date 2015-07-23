@@ -1,2 +1,2 @@
 # xiuPractice
-All pratice for Fandora/mdl-react
+All practice for Fandora/mdl-react
