@@ -1,5 +1,5 @@
 var React = require("react");
-// var MDL = require('mdl-react');
+var MDL = require('mdl-react');
 
 var HelloMessage = React.createClass({
 	render: function() {

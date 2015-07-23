@@ -9,25 +9,30 @@ var rename = require("gulp-rename");
 var connect = require('gulp-connect');
 var assign = require('lodash.assign');
 
-function bundleGenerator() {
+function bundleGenerator(isWatch) {
 	var opts = assign({}, watchify.args, {
 		entries : './example/app.jsx',
 		transform : [reactify],
 	});
-	var b = watchify(browserify(opts)); 
+	var b = browserify(opts); 
+	if(isWatch) {
+		b = watchify(b);
+	}
 	var bundle = function() {
 		return b.bundle()
-		.on('error', gutil.log.bind(gutil, 'Browserify Error'))
-		.pipe(source('app.js'))
-		.pipe(gulp.dest('./example'))
-		.pipe(connect.reload());
+			.on('error', gutil.log.bind(gutil, 'Browserify Error'))
+			.pipe(source('app.js'))
+			.pipe(gulp.dest('./example'))
+			.pipe(connect.reload());
 	};
-	b.on('update', bundle); // on any dep update, runs the bundler
-	b.on('log', gutil.log); // output build logs to terminal
+	if(isWatch) {
+		b.on('update', bundle); // on any dep update, runs the bundler
+		b.on('log', gutil.log); // output build logs to terminal
+	}
 	return bundle;
 }
 
-gulp.task('js', bundleGenerator());
+gulp.task('js', bundleGenerator(true));
 
 gulp.task('default', ['js'], function() {
 	connect.server({
