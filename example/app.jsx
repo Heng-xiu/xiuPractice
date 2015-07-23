@@ -2,7 +2,10 @@ var React = require("react");
 
 var HelloMessage = React.createClass({
 	render: function() {
-		return <div>Hello world</div>;
+		return (
+			<div>Hello world</div>
+			<div>Xiu-xiu</div>
+		);
 	}
 });
 

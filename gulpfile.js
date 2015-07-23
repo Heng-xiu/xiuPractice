@@ -22,7 +22,8 @@ function bundleGenerator() {
 		// .pipe(uglify({
 		// 	compress : true,
 		// }))
-		.pipe(gulp.dest('./example'));
+		.pipe(gulp.dest('./example'))
+		.pipe(connect.reload());
 	};
 	return bundle;
 }
@@ -32,6 +33,7 @@ gulp.task('js', bundleGenerator());
 gulp.task('default', ['js'], function() {
 	connect.server({
 		root : 'example',
+		livereload : true,
 		fallback : 'example/index.html',
 	});
 });
