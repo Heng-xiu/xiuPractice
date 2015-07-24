@@ -23,7 +23,7 @@
   "homepage": "https://github.com/Heng-xiu/xiuPractice#readme",
   "dependencies": {
     "gulp-uglify": "~1.2.0",
-    "mdl-react": "0.0.3",
+    "mdl-react": "https://github.com/Fandora/mdl-react.git",
     "react": "~0.13.3"
   },
   "devDependencies": {
