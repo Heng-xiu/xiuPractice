@@ -6,22 +6,346 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 
 	render: function() {
 
-		var links = [
-		    React.createElement("a", {href: "#"}, "Link 1"),
-		    React.createElement("a", {href: "#"}, "Link 2"),
-		    React.createElement("a", {href: "#"}, "Link 3"),
+		// Layout head link
+		var headLinks = [
+			React.createElement("a", {href: "#"}, "HLink 1"),
+			React.createElement("a", {href: "#"}, "HLink 2"),
+			React.createElement("a", {href: "#"}, "HLink 3"),
 		];
+
+		var tabLinks = [
+			React.createElement("a", {href: "#"}, "TLink 1"),
+			React.createElement("a", {href: "#"}, "TLink 2"),
+			React.createElement("a", {href: "#"}, "TLink 3"),
+			React.createElement("a", {href: "#"}, "TLink 4"),
+		];
+
+		// Footer 
+		var leftSection = {
+			links : [
+				React.createElement("a", {href: "#help"}, "Help"),
+				React.createElement("a", {href: "#help"}, "Help"),
+			],
+			logo : (
+				React.createElement("span", null, 
+					"Mini footer"
+				)
+			),
+		};
+
+		var rightSection = {
+			links : [
+				React.createElement("a", {href: "#cloud"}, 
+					React.createElement("i", {className: "material-icons"}, "cloud")
+				),
+			],
+		};
+
+		var pageStyle = {
+
+		};
+
+		// Card style
+		var titleStyle = {
+			color: '#00BCD4',
+			background: 'url("http://i.imgur.com/EJFxjMX.jpg") center / cover',
+		};
+
+		var iconStyle = {
+			color: '#00AACC',
+		};
+
+		var menuStyle = {
+			color: '#00BCD4',
+		};
+
+		var sectionStyle = {
+			position: 'relative',
+			marginBottom: '48px',
+			maxWidth: '860px',
+			margin: '0px auto',
+			padding: 'auto',
+		};
+
+		// Grid style
+		var gridStyle = {
+			backgroundColor: '#00AACC',
+		};
+
+		var gridTenStyle = {
+			backgroundColor: 'purple',
+		};
+
+		var gridEnightStyle = {
+			backgroundColor: 'blue',
+		};
+
+		var gridSixStyle = {
+			backgroundColor: '#aa00cc',
+		};
+
+		var gridFourStyle = {
+			backgroundColor: 'Green',
+		};
+
+		var gridTwoStyle = {
+			backgroundColor: 'yellow',
+		};
+
+		// hr style 
+		var hrStyle = {
+			display: 'block',
+			marginTop: '0.5em',
+			marginBottom: '0.5em',
+			marginLeft: 'auto',
+			marginRight: 'auto',
+			borderStyle: 'inset',
+			borderWidth: '1px',
+		};
 
 		return (
 			React.createElement("div", null, 
 				React.createElement(MDL.Layout, {
-					title: "Fixed header and drawer", 
+					title: "Fixed tabs", 
 					href: "#", 
-					isFixedHeader: true, 
-					headerLinks: links, 
-					drawerLinks: links
+					tabs: tabLinks, 
+					headerLinks: headLinks, 
+					initialTabIndex: 1, 
+					isFixedTabs: true
 				}, 
-					"put your content here"
+					React.createElement("div", {style: pageStyle}, 
+						"//  First card", 
+						React.createElement("section", {style: sectionStyle}, 
+							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+								React.createElement(MDL.CardTitle, {height: "176", style: titleStyle}, 
+									"CardTitle"
+								), 
+								React.createElement(MDL.CardSupportingText, null, 
+									"CardSupportingText"
+								), 
+								React.createElement(MDL.CardAction, {border: true}, 
+									React.createElement(MDL.Button, {type: "FlatButton", 
+										isRipple: true, 
+										isPrimary: true
+									}, 
+										"Get Start"
+									), 
+									React.createElement("br", null)
+								), 
+								React.createElement(MDL.CardMenu, {style: menuStyle}, 
+									React.createElement(MDL.Button, {type: "IconButton", 
+										isRipple: true, 
+										isMini: true, 
+										isPrimary: true
+									}, 
+										React.createElement("i", {style: iconStyle, className: "material-icons"}, "share"), 
+										React.createElement("a", {href: "#"})
+									), 
+									React.createElement("br", null)
+								)
+							)
+						), 
+						"//  secend card", 
+						React.createElement("section", {style: sectionStyle}, 
+							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+								React.createElement(MDL.CardSupportingText, null, 
+									React.createElement("h4", null, "Technology"), 
+									React.createElement("p", null, "Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua.")
+								), 
+								React.createElement(MDL.CardAction, {border: true}, 
+									React.createElement(MDL.Button, {type: "FlatButton", 
+										isRipple: true, 
+										isPrimary: true
+									}, 
+										"READ OUR FEATURES"
+									), 
+									React.createElement("br", null)
+								), 
+								React.createElement(MDL.CardMenu, {style: menuStyle}, 
+									React.createElement(MDL.Button, {type: "IconButton", 
+										isRipple: true, 
+										isMini: true, 
+										isPrimary: true
+									}, 
+										React.createElement("i", {style: iconStyle, className: "material-icons"}, "more_vert")
+									), 
+									React.createElement("br", null)
+								)
+							)
+						), 
+
+						"//  Third card", 
+						React.createElement("section", {style: sectionStyle}, 
+							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+								React.createElement(MDL.CardSupportingText, null, 
+									React.createElement("h4", null, "Detail"), 
+									React.createElement(MDL.Grid, {style: gridStyle}, 
+										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
+										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
+									), 
+									React.createElement(MDL.Grid, {style: gridStyle}, 
+										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
+										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
+									), 
+									React.createElement(MDL.Grid, {style: gridStyle}, 
+										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
+										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
+									)
+								), 
+								React.createElement(MDL.CardAction, {border: true}, 
+									React.createElement(MDL.Button, {type: "FlatButton", 
+										isRipple: true, 
+										isPrimary: true
+									}, 
+										"READ OUR FEATURES"
+									), 
+									React.createElement("br", null)
+								), 
+								React.createElement(MDL.CardMenu, {style: menuStyle}, 
+									React.createElement(MDL.Button, {type: "IconButton", 
+										isRipple: true, 
+										isMini: true, 
+										isPrimary: true
+									}, 
+										React.createElement("i", {style: iconStyle, className: "material-icons"}, "more_vert")
+									), 
+									React.createElement("br", null)
+								)
+							)
+						), 
+
+						"//  Fourth card", 
+						React.createElement("section", {style: sectionStyle}, 
+							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+								React.createElement(MDL.CardSupportingText, null, 
+									React.createElement("h4", null, "Crew Name"), 
+									React.createElement(MDL.Grid, {style: gridStyle}, 
+										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
+										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
+									)
+								), 
+								React.createElement(MDL.CardAction, {border: true}, 
+									
+									React.createElement(MDL.Grid, {style: gridStyle}, 
+										React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+											React.createElement(MDL.Button, {type: "FlatButton", 
+												isRipple: true, 
+												isPrimary: true
+											}, 
+												"Social icon"
+											)
+										), 
+										React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+											React.createElement(MDL.Button, {type: "FlatButton", 
+												isRipple: true, 
+												isPrimary: true
+											}, 
+												"Social icon"
+											)
+										), 
+										React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+											React.createElement(MDL.Button, {type: "FlatButton", 
+												isRipple: true, 
+												isPrimary: true
+											}, 
+												"Social icon"
+											)
+										)
+									)
+								), 
+								React.createElement(MDL.CardMenu, {style: menuStyle}, 
+									React.createElement(MDL.Button, {type: "IconButton", 
+										isRipple: true, 
+										isMini: true, 
+										isPrimary: true
+									}, 
+										React.createElement("i", {style: iconStyle, className: "material-icons"}, "more_vert")
+									), 
+									React.createElement("br", null)
+								)
+							)
+						), 
+
+						"//  Fivth card", 
+						React.createElement("section", {style: sectionStyle}, 
+							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+								React.createElement(MDL.CardTitle, {height: "176", style: titleStyle}, 
+									"Crew Name"
+								), 
+								React.createElement(MDL.CardSupportingText, null, 
+									"職稱 內容"
+								), 
+								React.createElement(MDL.CardAction, {border: true}, 
+									React.createElement(MDL.Button, {type: "FlatButton", 
+										isRipple: true, 
+										isPrimary: true
+									}, 
+										"Social icon"
+									), 
+									React.createElement("br", null)
+								)
+							)
+						), 
+
+						"// Sixth Card", 
+						React.createElement("section", {style: sectionStyle}, 
+							React.createElement(MDL.Grid, {style: gridStyle}, 
+								React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+								"Picture"
+								), 
+
+								React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, 
+									React.createElement(MDL.Card, {width: "100%", shadow: 6, style: sectionStyle}, 
+										React.createElement(MDL.CardSupportingText, null, 
+											React.createElement("h5", null, "Crew Name"), 
+											React.createElement("p", null, "content")
+										), 
+										React.createElement(MDL.CardAction, {border: true}, 
+											React.createElement(MDL.Button, {type: "FlatButton", 
+												isRipple: true, 
+												isPrimary: true
+											}, 
+												"Social icon"
+											), 
+											React.createElement("br", null)
+										)
+									)
+								)
+							)
+						)
+					), 
+					"// Introduce key part 1.From MDL 2.Combine react 3.it free", 
+					React.createElement(MDL.Grid, {style: gridStyle}, 
+						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+							React.createElement("h5", null, "title"), 
+							React.createElement("p", null, "context")
+						), 
+						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+							React.createElement("h5", null, "title"), 
+							React.createElement("p", null, "context")
+						), 
+						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+							React.createElement("h5", null, "title"), 
+							React.createElement("p", null, "context")
+						)
+					), 
+					"// Introduce feature",  
+					React.createElement(MDL.Grid, {style: gridStyle}, 
+						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, "Picture"), 
+						React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, "content")
+					), 
+					React.createElement(MDL.Grid, {style: gridStyle}, 
+						React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, "content"), 
+						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, "Picture")
+					), 
+					React.createElement(MDL.Grid, {style: gridStyle}, 
+						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, "Picture"), 
+						React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, "content")
+					), 
+					React.createElement(MDL.MiniFooter, {
+						leftSection: leftSection, 
+						rightSection: rightSection}
+					)
 				)
 			)
 		);
