@@ -7,345 +7,383 @@ var HelloMessage = React.createClass({
 
 		// Layout head link
 		var headLinks = [
-			<a href='#'>HLink 1</a>,
-			<a href='#'>HLink 2</a>,
-			<a href='#'>HLink 3</a>,
-		];
-
-		var tabLinks = [
-			<a href='#'>TLink 1</a>,
-			<a href='#'>TLink 2</a>,
-			<a href='#'>TLink 3</a>,
-			<a href='#'>TLink 4</a>,
+			<a href='#section1' >HOME</a>,
+			<a href='#section2' >FEATURE</a>,
+			<a href='#section3' >TEAM</a>,
 		];
 
 		// Footer 
 		var leftSection = {
 			links : [
-				<a href='#help'>Help</a>,
-				<a href='#help'>Help</a>,
+				<a href='http://fandorashop.com/tw/page/about'>
+					About
+				</a>,
 			],
 			logo : (
 				<span>
-					Mini footer
+					Fandora Shop
 				</span>
 			),
 		};
 
 		var rightSection = {
 			links : [
-				<a href='#cloud'>
-					<i className='material-icons'>cloud</i>
+				<a href='https://www.facebook.com/fandorashop'>
+					<i className="fa fa-facebook-official fa-3x"></i>
+				</a>,
+				<a href='https://github.com/Fandora'>
+					<i className='fa fa-github-square fa-3x'></i>
+				</a>,
+				<a href='https://instagram.com/fandorashop/'>
+					<i className='fa fa-instagram fa-3x'></i>
 				</a>,
 			],
-		};
-
-		var pageStyle = {
-
 		};
 
 		// Card style
 		var titleStyle = {
 			color: '#00BCD4',
-			background: 'url("http://i.imgur.com/EJFxjMX.jpg") center / cover',
-		};
-
-		var iconStyle = {
-			color: '#00AACC',
-		};
-
-		var menuStyle = {
-			color: '#00BCD4',
+			// background: 'url("https://avatars2.githubusercontent.com/u/5138488") center / cover',
+			// backgroundImage:'url("https://avatars2.githubusercontent.com/u/5138488")',
+			// backgroundRepeat: 'no-repeat',
+			// backgroundSize: '100%',
+			// backgroundPosition: 'initial',
 		};
 
 		var sectionStyle = {
 			position: 'relative',
 			marginBottom: '48px',
 			maxWidth: '860px',
-			margin: '0px auto',
-			padding: 'auto',
+			margin: '20px auto 20px',
 		};
 
-		// Grid style
-		var gridStyle = {
-			backgroundColor: '#00AACC',
+		var crewOneStyle = {
+			backgroundImage:'url("https://avatars0.githubusercontent.com/u/2688505?v=3&s=400")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridTenStyle = {
-			backgroundColor: 'purple',
+		var crewTwoStyle = {
+			backgroundImage:'url("https://avatars0.githubusercontent.com/u/4189291")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridEnightStyle = {
-			backgroundColor: 'blue',
+		var crewThreeStyle = {
+			backgroundImage:'url("https://avatars2.githubusercontent.com/u/4170738")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridSixStyle = {
-			backgroundColor: '#aa00cc',
+		var crewFourStyle = {
+			backgroundImage:'url("https://avatars3.githubusercontent.com/u/13128288")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridFourStyle = {
-			backgroundColor: 'Green',
+		var crewFiveStyle = {
+			backgroundImage:'url("https://avatars2.githubusercontent.com/u/5138488")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridTwoStyle = {
-			backgroundColor: 'yellow',
+		// Button style
+		var feedBack = {
+			height: '50px',
+			width: '50px',
+			position: 'fixed',
+			bottom: '50%',
+			right: '0%',
+		};
+		// section1
+		// firstSideStyle
+		var headerStyle = {
+			backgroundColor: '#46C7C7',
+			backgroundImage:'url("http://wallpaper-download.net/wallpapers/random-wallpapers-road-background-wallpaper-wallpaper-31203.jpg")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: 'auto',
+			backgroundPosition: 'center',
+			WebkitFilter: 'grayscale(100%)',
+			filter: 'gray',
 		};
 
-		// hr style 
-		var hrStyle = {
-			display: 'block',
-			marginTop: '0.5em',
-			marginBottom: '0.5em',
-			marginLeft: 'auto',
-			marginRight: 'auto',
-			borderStyle: 'inset',
-			borderWidth: '1px',
+		var section1H3Style = {
+			opacity: '54',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+			fontSize: '56px',
+			fontWeight: '400',
+			lineHeight: '64px',
+			margin: '20% 0 20%',
+			color: 'white',
+		};
+
+		var section1PStyle = {
+			fontSize: '16px',
+			margin: '0 16px',
+			paddingTop: '8px',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+		};
+
+		// section2
+		// featureInfoStyle
+		var featureInfoStyle = {
+			backgroundColor: '#FFEBCD',
+		};
+
+		var section2TitleStyle = {
+			opacity: '54',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+			fontSize: '34px',
+			fontWeight: '400',
+			lineHeight: '40px',
+			margin: '0% auto 10% auto',
+		};
+
+		var section2PStyle = {
+			textAlign: 'center',
+			fontSize: '20px',
+		};
+
+		var featureCycle = {
+			borderRadius: '999px',
+			margin: '0 auto',
+			height: '80px',
+			width: '80px',
+			backgroundColor: '#E24C38',
+			textAlign: 'center',
+			lineHeight: '90px',
+		};
+
+		var featureH5 = {
+			textAlign: 'center',
+		};
+
+		var featureP = {
+			textAlign: 'center',
+		};
+
+		// section3
+		// crewInfoStyle
+		var crewInfoStyle = {
+			backgroundColor: '#F5F5F5',
+		};
+
+		var section3H3Style = {
+			opacity: '54',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+			fontSize: '34px',
+			fontWeight: '400',
+			lineHeight: '40px',
+			// margin: '20% 0 20%',
 		};
 
 		return (
-			<div>
+			<div >
+
 				<MDL.Layout
 					title='Fixed tabs'
 					href='#'
-					tabs={tabLinks}
 					headerLinks={headLinks}
-					initialTabIndex={1}
-					isFixedTabs={true}
+					drawerLinks={headLinks}
 				>
-					<div style = {pageStyle}>
-						//  First card
-						<section style={sectionStyle}>
-							<MDL.Card width='512' shadow={6} style={sectionStyle}>
-								<MDL.CardTitle height='176' style={titleStyle}>
-									CardTitle
-								</MDL.CardTitle>
-								<MDL.CardSupportingText>
-									CardSupportingText
-								</MDL.CardSupportingText>
-								<MDL.CardAction border={true}>
-									<MDL.Button type="FlatButton"
-										isRipple={true}
-										isPrimary={true}
-									>
-										Get Start
-									</MDL.Button>
-									<br />
-								</MDL.CardAction>
-								<MDL.CardMenu style={menuStyle}>
-									<MDL.Button type="IconButton"
-										isRipple={true}
-										isMini={true}
-										isPrimary={true}
-									>
-										<i style={iconStyle} className="material-icons">share</i>
-										<a href="#"></a>
-									</MDL.Button>
-									<br />
-								</MDL.CardMenu>
-							</MDL.Card>
-						</section>
-						//  secend card
-						<section style={sectionStyle}>
-							<MDL.Card width='512' shadow={6} style={sectionStyle}>
-								<MDL.CardSupportingText>
-									<h4>Technology</h4>
-									<p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua.</p>
-								</MDL.CardSupportingText>
-								<MDL.CardAction border={true}>
-									<MDL.Button type="FlatButton"
-										isRipple={true}
-										isPrimary={true}
-									>
-										READ OUR FEATURES
-									</MDL.Button>
-									<br />
-								</MDL.CardAction>
-								<MDL.CardMenu style={menuStyle}>
-									<MDL.Button type="IconButton"
-										isRipple={true}
-										isMini={true}
-										isPrimary={true}
-									>
-										<i style={iconStyle} className="material-icons">more_vert</i>
-									</MDL.Button>
-									<br />
-								</MDL.CardMenu>
-							</MDL.Card>
-						</section>
 
-						//  Third card
-						<section style={sectionStyle}>
-							<MDL.Card width='512' shadow={6} style={sectionStyle}>
-								<MDL.CardSupportingText>
-									<h4>Detail</h4>
-									<MDL.Grid style={gridStyle}>
-										<MDL.GridCell col={2} style={gridTwoStyle}>Picture</MDL.GridCell>
-										<MDL.GridCell col={10} style={gridTenStyle}>content</MDL.GridCell>
-									</MDL.Grid>
-									<MDL.Grid style={gridStyle}>
-										<MDL.GridCell col={2} style={gridTwoStyle}>Picture</MDL.GridCell>
-										<MDL.GridCell col={10} style={gridTenStyle}>content</MDL.GridCell>
-									</MDL.Grid>
-									<MDL.Grid style={gridStyle}>
-										<MDL.GridCell col={2} style={gridTwoStyle}>Picture</MDL.GridCell>
-										<MDL.GridCell col={10} style={gridTenStyle}>content</MDL.GridCell>
-									</MDL.Grid>
-								</MDL.CardSupportingText>
-								<MDL.CardAction border={true}>
-									<MDL.Button type="FlatButton"
-										isRipple={true}
-										isPrimary={true}
-									>
-										READ OUR FEATURES
-									</MDL.Button>
-									<br />
-								</MDL.CardAction>
-								<MDL.CardMenu style={menuStyle}>
-									<MDL.Button type="IconButton"
-										isRipple={true}
-										isMini={true}
-										isPrimary={true}
-									>
-										<i style={iconStyle} className="material-icons">more_vert</i>
-									</MDL.Button>
-									<br />
-								</MDL.CardMenu>
-							</MDL.Card>
-						</section>
+					<div id="fullpage'">
 
-						//  Fourth card
-						<section style={sectionStyle}>
-							<MDL.Card width='512' shadow={6} style={sectionStyle}>
-								<MDL.CardSupportingText>
-									<h4>Crew Name</h4>
-									<MDL.Grid style={gridStyle}>
-										<MDL.GridCell col={2} style={gridTwoStyle}>Picture</MDL.GridCell>
-										<MDL.GridCell col={10} style={gridTenStyle}>content</MDL.GridCell>
-									</MDL.Grid>
-								</MDL.CardSupportingText>
-								<MDL.CardAction border={true}>
-									
-									<MDL.Grid style={gridStyle}>
-										<MDL.GridCell col={4} style={gridFourStyle}>
+						<div className="section active" id="section1" style={headerStyle} >
+							<h3 style={section1H3Style}>Start your MDL-react website</h3>
+							<br />
+							<p style={section1PStyle}>
+								<a href="https://github.com/Fandora">
+									Follow us on Github
+								</a>
+							</p>
+						</div>
+
+						<div className="section" id="section2" style={featureInfoStyle} >
+							<p style={section2TitleStyle}>Open source, Developer API and Material Desgin</p>
+							<p style={section2PStyle}>MDL-react is the best choice for developer who want to use React.js and MDL</p>
+							<section style={sectionStyle}>
+								<MDL.Grid>
+									<MDL.GridCell col={4} >
+										<div style={featureCycle}>
+											<i className="material-icons">accessibility</i>
+										</div>
+										<h5 style={featureH5}>Open source</h5>
+										<p style={featureP}>mdl-react is open source. If you would want to improve our exciting project, find us on GitHub, Discuss and Slack.</p>
+									</MDL.GridCell>
+									<MDL.GridCell col={4}>
+										<div style={featureCycle}>
+											<i className="material-icons">computer</i>
+										</div>
+										<h5 style={featureH5}>Developer API</h5>
+										<p style={featureP}>We also provide API for Developer to create their own website, as BLOG. Portfolio. DASHBOARD</p>
+									</MDL.GridCell>
+									<MDL.GridCell col={4} >
+										<div style={featureCycle}>
+											<i className="material-icons">layers</i>
+										</div>
+										<h5 style={featureH5}>Material Desgin</h5>
+										<p style={featureP}>This is material design. We combine two project from the hottest company, React.js and Material Design lite</p>
+									</MDL.GridCell>
+								</MDL.Grid>
+							</section>
+						</div>
+
+						<div className="section" id="section3" style = {crewInfoStyle} >
+							<h3 style={section3H3Style}>Team</h3>
+							<section style={sectionStyle}>
+								<MDL.Card width='512' shadow={6} style={sectionStyle}>
+									<MDL.CardTitle height='350' style={crewOneStyle}>
+										xpsteven
+									</MDL.CardTitle>
+									<MDL.CardSupportingText>
+										<h4>職稱</h4>
+										<p>內容</p>
+									</MDL.CardSupportingText>
+									<MDL.CardAction border={true}>
+										<a href="https://github.com/xpsteven">
 											<MDL.Button type="FlatButton"
 												isRipple={true}
 												isPrimary={true}
+												isMini={true}
+												isAccent={false}
+												isDisabled={false}
 											>
-												Social icon
+												GITHUB
 											</MDL.Button>
-										</MDL.GridCell>
-										<MDL.GridCell col={4} style={gridFourStyle}>
+										</a>
+									</MDL.CardAction>
+								</MDL.Card>
+							</section>
+							<section style={sectionStyle}>
+								<MDL.Card width='512' shadow={6} style={sectionStyle}>
+									<MDL.CardTitle height='350' style={crewTwoStyle}>
+										terence223
+									</MDL.CardTitle>
+									<MDL.CardSupportingText>
+										<h4>職稱</h4>
+										<p>內容</p>
+									</MDL.CardSupportingText>
+									<MDL.CardAction border={true}>
+										<a href="https://github.com/terence223">
 											<MDL.Button type="FlatButton"
 												isRipple={true}
 												isPrimary={true}
+												isMini={true}
+												isAccent={false}
+												isDisabled={false}
 											>
-												Social icon
+												GITHUB
 											</MDL.Button>
-										</MDL.GridCell>
-										<MDL.GridCell col={4} style={gridFourStyle}>
+										</a>
+									</MDL.CardAction>
+								</MDL.Card>
+							</section>
+							<section style={sectionStyle}>
+								<MDL.Card width='512' shadow={6} style={sectionStyle}>
+									<MDL.CardTitle height='350' style={crewThreeStyle}>
+										seal789ie
+									</MDL.CardTitle>
+									<MDL.CardSupportingText>
+										<h4>職稱</h4>
+										<p>內容</p>
+									</MDL.CardSupportingText>
+									<MDL.CardAction border={true}>
+										<a href="https://github.com/seal789ie">
 											<MDL.Button type="FlatButton"
 												isRipple={true}
 												isPrimary={true}
+												isMini={true}
+												isAccent={false}
+												isDisabled={false}
 											>
-												Social icon
+												GITHUB
 											</MDL.Button>
-										</MDL.GridCell>
-									</MDL.Grid>
-								</MDL.CardAction>
-								<MDL.CardMenu style={menuStyle}>
-									<MDL.Button type="IconButton"
-										isRipple={true}
-										isMini={true}
-										isPrimary={true}
-									>
-										<i style={iconStyle} className="material-icons">more_vert</i>
-									</MDL.Button>
-									<br />
-								</MDL.CardMenu>
-							</MDL.Card>
-						</section>
-
-						//  Fivth card
-						<section style={sectionStyle}>
-							<MDL.Card width='512' shadow={6} style={sectionStyle}>
-								<MDL.CardTitle height='176' style={titleStyle}>
-									Crew Name
-								</MDL.CardTitle>
-								<MDL.CardSupportingText>
-									職稱 內容
-								</MDL.CardSupportingText>
-								<MDL.CardAction border={true}>
-									<MDL.Button type="FlatButton"
-										isRipple={true}
-										isPrimary={true}
-									>
-										Social icon
-									</MDL.Button>
-									<br />
-								</MDL.CardAction>
-							</MDL.Card>
-						</section>
-
-						// Sixth Card
-						<section style={sectionStyle}>
-							<MDL.Grid style={gridStyle}>
-								<MDL.GridCell col={4} style={gridFourStyle}>
-								Picture
-								</MDL.GridCell>
-
-								<MDL.GridCell col={8} style={gridEnightStyle}>
-									<MDL.Card width='100%' shadow={6} style={sectionStyle}>
-										<MDL.CardSupportingText>
-											<h5>Crew Name</h5>
-											<p>content</p>
-										</MDL.CardSupportingText>
-										<MDL.CardAction border={true}>
+										</a>
+									</MDL.CardAction>
+								</MDL.Card>
+							</section>
+							<section style={sectionStyle}>
+								<MDL.Card width='512' shadow={6} style={sectionStyle}>
+									<MDL.CardTitle height='350' style={crewFourStyle}>
+										EmilyWen
+									</MDL.CardTitle>
+									<MDL.CardSupportingText>
+										<h4>職稱</h4>
+										<p>內容</p>
+									</MDL.CardSupportingText>
+									<MDL.CardAction border={true}>
+										<a href="https://github.com/EmilyWen">
 											<MDL.Button type="FlatButton"
 												isRipple={true}
 												isPrimary={true}
+												isMini={true}
+												isAccent={false}
+												isDisabled={false}
 											>
-												Social icon
+												GITHUB
 											</MDL.Button>
-											<br />
-										</MDL.CardAction>
-									</MDL.Card>
-								</MDL.GridCell>
-							</MDL.Grid>
-						</section>
+										</a>
+									</MDL.CardAction>
+								</MDL.Card>
+							</section>
+							<section style={sectionStyle}>
+								<MDL.Card width='512' shadow={6} style={sectionStyle}>
+									<MDL.CardTitle height='350' style={crewFiveStyle}>
+										Heng-xiu
+									</MDL.CardTitle>
+									<MDL.CardSupportingText>
+										<h4>職稱</h4>
+										<p>內容</p>
+									</MDL.CardSupportingText>
+									<MDL.CardAction border={true}>
+										<a href="https://github.com/Heng-xiu">
+											<MDL.Button type="FlatButton"
+												isRipple={true}
+												isPrimary={true}
+												isMini={true}
+												isAccent={false}
+												isDisabled={false}
+											>
+												GITHUB
+											</MDL.Button>
+										</a>
+									</MDL.CardAction>
+								</MDL.Card>
+							</section>
+						</div>
 					</div>
-					// Introduce key part 1.From MDL 2.Combine react 3.it free
-					<MDL.Grid style={gridStyle}>
-						<MDL.GridCell col={4} style={gridFourStyle}>
-							<h5>title</h5>
-							<p>context</p>
-						</MDL.GridCell>
-						<MDL.GridCell col={4} style={gridFourStyle}>
-							<h5>title</h5>
-							<p>context</p>
-						</MDL.GridCell>
-						<MDL.GridCell col={4} style={gridFourStyle}>
-							<h5>title</h5>
-							<p>context</p>
-						</MDL.GridCell>
-					</MDL.Grid>
-					// Introduce feature 
-					<MDL.Grid style={gridStyle}>
-						<MDL.GridCell col={4} style={gridFourStyle}>Picture</MDL.GridCell>
-						<MDL.GridCell col={8} style={gridEnightStyle}>content</MDL.GridCell>
-					</MDL.Grid>
-					<MDL.Grid style={gridStyle}>
-						<MDL.GridCell col={8} style={gridEnightStyle}>content</MDL.GridCell>
-						<MDL.GridCell col={4} style={gridFourStyle}>Picture</MDL.GridCell>
-					</MDL.Grid>
-					<MDL.Grid style={gridStyle}>
-						<MDL.GridCell col={4} style={gridFourStyle}>Picture</MDL.GridCell>
-						<MDL.GridCell col={8} style={gridEnightStyle}>content</MDL.GridCell>
-					</MDL.Grid>
+
+
 					<MDL.MiniFooter
 						leftSection={leftSection}
 						rightSection={rightSection}
 					/>
+
+					<a href="#section1">
+						<MDL.Button type="FloatingActionButton" isPrimary={true} style={feedBack}>
+							<button>
+								<i className="material-icons">keyboard_arrow_up</i>
+							</button>
+						</MDL.Button>
+					</a>
+
 				</MDL.Layout>
+
 			</div>
 		);
 	}

@@ -8,345 +8,383 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 
 		// Layout head link
 		var headLinks = [
-			React.createElement("a", {href: "#"}, "HLink 1"),
-			React.createElement("a", {href: "#"}, "HLink 2"),
-			React.createElement("a", {href: "#"}, "HLink 3"),
-		];
-
-		var tabLinks = [
-			React.createElement("a", {href: "#"}, "TLink 1"),
-			React.createElement("a", {href: "#"}, "TLink 2"),
-			React.createElement("a", {href: "#"}, "TLink 3"),
-			React.createElement("a", {href: "#"}, "TLink 4"),
+			React.createElement("a", {href: "#section1"}, "HOME"),
+			React.createElement("a", {href: "#section2"}, "FEATURE"),
+			React.createElement("a", {href: "#section3"}, "TEAM"),
 		];
 
 		// Footer 
 		var leftSection = {
 			links : [
-				React.createElement("a", {href: "#help"}, "Help"),
-				React.createElement("a", {href: "#help"}, "Help"),
+				React.createElement("a", {href: "http://fandorashop.com/tw/page/about"}, 
+					"About"
+				),
 			],
 			logo : (
 				React.createElement("span", null, 
-					"Mini footer"
+					"Fandora Shop"
 				)
 			),
 		};
 
 		var rightSection = {
 			links : [
-				React.createElement("a", {href: "#cloud"}, 
-					React.createElement("i", {className: "material-icons"}, "cloud")
+				React.createElement("a", {href: "https://www.facebook.com/fandorashop"}, 
+					React.createElement("i", {className: "fa fa-facebook-official fa-3x"})
+				),
+				React.createElement("a", {href: "https://github.com/Fandora"}, 
+					React.createElement("i", {className: "fa fa-github-square fa-3x"})
+				),
+				React.createElement("a", {href: "https://instagram.com/fandorashop/"}, 
+					React.createElement("i", {className: "fa fa-instagram fa-3x"})
 				),
 			],
-		};
-
-		var pageStyle = {
-
 		};
 
 		// Card style
 		var titleStyle = {
 			color: '#00BCD4',
-			background: 'url("http://i.imgur.com/EJFxjMX.jpg") center / cover',
-		};
-
-		var iconStyle = {
-			color: '#00AACC',
-		};
-
-		var menuStyle = {
-			color: '#00BCD4',
+			// background: 'url("https://avatars2.githubusercontent.com/u/5138488") center / cover',
+			// backgroundImage:'url("https://avatars2.githubusercontent.com/u/5138488")',
+			// backgroundRepeat: 'no-repeat',
+			// backgroundSize: '100%',
+			// backgroundPosition: 'initial',
 		};
 
 		var sectionStyle = {
 			position: 'relative',
 			marginBottom: '48px',
 			maxWidth: '860px',
-			margin: '0px auto',
-			padding: 'auto',
+			margin: '20px auto 20px',
 		};
 
-		// Grid style
-		var gridStyle = {
-			backgroundColor: '#00AACC',
+		var crewOneStyle = {
+			backgroundImage:'url("https://avatars0.githubusercontent.com/u/2688505?v=3&s=400")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridTenStyle = {
-			backgroundColor: 'purple',
+		var crewTwoStyle = {
+			backgroundImage:'url("https://avatars0.githubusercontent.com/u/4189291")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridEnightStyle = {
-			backgroundColor: 'blue',
+		var crewThreeStyle = {
+			backgroundImage:'url("https://avatars2.githubusercontent.com/u/4170738")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridSixStyle = {
-			backgroundColor: '#aa00cc',
+		var crewFourStyle = {
+			backgroundImage:'url("https://avatars3.githubusercontent.com/u/13128288")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridFourStyle = {
-			backgroundColor: 'Green',
+		var crewFiveStyle = {
+			backgroundImage:'url("https://avatars2.githubusercontent.com/u/5138488")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: '100%',
+			backgroundPosition: 'initial',
+			color: '#ffffff',
 		};
 
-		var gridTwoStyle = {
-			backgroundColor: 'yellow',
+		// Button style
+		var feedBack = {
+			height: '50px',
+			width: '50px',
+			position: 'fixed',
+			bottom: '50%',
+			right: '0%',
+		};
+		// section1
+		// firstSideStyle
+		var headerStyle = {
+			backgroundColor: '#46C7C7',
+			backgroundImage:'url("http://wallpaper-download.net/wallpapers/random-wallpapers-road-background-wallpaper-wallpaper-31203.jpg")',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: 'auto',
+			backgroundPosition: 'center',
+			WebkitFilter: 'grayscale(100%)',
+			filter: 'gray',
 		};
 
-		// hr style 
-		var hrStyle = {
-			display: 'block',
-			marginTop: '0.5em',
-			marginBottom: '0.5em',
-			marginLeft: 'auto',
-			marginRight: 'auto',
-			borderStyle: 'inset',
-			borderWidth: '1px',
+		var section1H3Style = {
+			opacity: '54',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+			fontSize: '56px',
+			fontWeight: '400',
+			lineHeight: '64px',
+			margin: '20% 0 20%',
+			color: 'white',
+		};
+
+		var section1PStyle = {
+			fontSize: '16px',
+			margin: '0 16px',
+			paddingTop: '8px',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+		};
+
+		// section2
+		// featureInfoStyle
+		var featureInfoStyle = {
+			backgroundColor: '#FFEBCD',
+		};
+
+		var section2TitleStyle = {
+			opacity: '54',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+			fontSize: '34px',
+			fontWeight: '400',
+			lineHeight: '40px',
+			margin: '0% auto 10% auto',
+		};
+
+		var section2PStyle = {
+			textAlign: 'center',
+			fontSize: '20px',
+		};
+
+		var featureCycle = {
+			borderRadius: '999px',
+			margin: '0 auto',
+			height: '80px',
+			width: '80px',
+			backgroundColor: '#E24C38',
+			textAlign: 'center',
+			lineHeight: '90px',
+		};
+
+		var featureH5 = {
+			textAlign: 'center',
+		};
+
+		var featureP = {
+			textAlign: 'center',
+		};
+
+		// section3
+		// crewInfoStyle
+		var crewInfoStyle = {
+			backgroundColor: '#F5F5F5',
+		};
+
+		var section3H3Style = {
+			opacity: '54',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+			fontSize: '34px',
+			fontWeight: '400',
+			lineHeight: '40px',
+			// margin: '20% 0 20%',
 		};
 
 		return (
 			React.createElement("div", null, 
+
 				React.createElement(MDL.Layout, {
 					title: "Fixed tabs", 
 					href: "#", 
-					tabs: tabLinks, 
 					headerLinks: headLinks, 
-					initialTabIndex: 1, 
-					isFixedTabs: true
+					drawerLinks: headLinks
 				}, 
-					React.createElement("div", {style: pageStyle}, 
-						"//  First card", 
-						React.createElement("section", {style: sectionStyle}, 
-							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
-								React.createElement(MDL.CardTitle, {height: "176", style: titleStyle}, 
-									"CardTitle"
-								), 
-								React.createElement(MDL.CardSupportingText, null, 
-									"CardSupportingText"
-								), 
-								React.createElement(MDL.CardAction, {border: true}, 
-									React.createElement(MDL.Button, {type: "FlatButton", 
-										isRipple: true, 
-										isPrimary: true
-									}, 
-										"Get Start"
-									), 
-									React.createElement("br", null)
-								), 
-								React.createElement(MDL.CardMenu, {style: menuStyle}, 
-									React.createElement(MDL.Button, {type: "IconButton", 
-										isRipple: true, 
-										isMini: true, 
-										isPrimary: true
-									}, 
-										React.createElement("i", {style: iconStyle, className: "material-icons"}, "share"), 
-										React.createElement("a", {href: "#"})
-									), 
-									React.createElement("br", null)
-								)
-							)
-						), 
-						"//  secend card", 
-						React.createElement("section", {style: sectionStyle}, 
-							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
-								React.createElement(MDL.CardSupportingText, null, 
-									React.createElement("h4", null, "Technology"), 
-									React.createElement("p", null, "Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua.")
-								), 
-								React.createElement(MDL.CardAction, {border: true}, 
-									React.createElement(MDL.Button, {type: "FlatButton", 
-										isRipple: true, 
-										isPrimary: true
-									}, 
-										"READ OUR FEATURES"
-									), 
-									React.createElement("br", null)
-								), 
-								React.createElement(MDL.CardMenu, {style: menuStyle}, 
-									React.createElement(MDL.Button, {type: "IconButton", 
-										isRipple: true, 
-										isMini: true, 
-										isPrimary: true
-									}, 
-										React.createElement("i", {style: iconStyle, className: "material-icons"}, "more_vert")
-									), 
-									React.createElement("br", null)
+
+					React.createElement("div", {id: "fullpage'"}, 
+
+						React.createElement("div", {className: "section active", id: "section1", style: headerStyle}, 
+							React.createElement("h3", {style: section1H3Style}, "Start your MDL-react website"), 
+							React.createElement("br", null), 
+							React.createElement("p", {style: section1PStyle}, 
+								React.createElement("a", {href: "https://github.com/Fandora"}, 
+									"Follow us on Github"
 								)
 							)
 						), 
 
-						"//  Third card", 
-						React.createElement("section", {style: sectionStyle}, 
-							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
-								React.createElement(MDL.CardSupportingText, null, 
-									React.createElement("h4", null, "Detail"), 
-									React.createElement(MDL.Grid, {style: gridStyle}, 
-										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
-										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
+						React.createElement("div", {className: "section", id: "section2", style: featureInfoStyle}, 
+							React.createElement("p", {style: section2TitleStyle}, "Open source, Developer API and Material Desgin"), 
+							React.createElement("p", {style: section2PStyle}, "MDL-react is the best choice for developer who want to use React.js and MDL"), 
+							React.createElement("section", {style: sectionStyle}, 
+								React.createElement(MDL.Grid, null, 
+									React.createElement(MDL.GridCell, {col: 4}, 
+										React.createElement("div", {style: featureCycle}, 
+											React.createElement("i", {className: "material-icons"}, "accessibility")
+										), 
+										React.createElement("h5", {style: featureH5}, "Open source"), 
+										React.createElement("p", {style: featureP}, "mdl-react is open source. If you would want to improve our exciting project, find us on GitHub, Discuss and Slack.")
 									), 
-									React.createElement(MDL.Grid, {style: gridStyle}, 
-										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
-										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
+									React.createElement(MDL.GridCell, {col: 4}, 
+										React.createElement("div", {style: featureCycle}, 
+											React.createElement("i", {className: "material-icons"}, "computer")
+										), 
+										React.createElement("h5", {style: featureH5}, "Developer API"), 
+										React.createElement("p", {style: featureP}, "We also provide API for Developer to create their own website, as BLOG. Portfolio. DASHBOARD")
 									), 
-									React.createElement(MDL.Grid, {style: gridStyle}, 
-										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
-										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
+									React.createElement(MDL.GridCell, {col: 4}, 
+										React.createElement("div", {style: featureCycle}, 
+											React.createElement("i", {className: "material-icons"}, "layers")
+										), 
+										React.createElement("h5", {style: featureH5}, "Material Desgin"), 
+										React.createElement("p", {style: featureP}, "This is material design. We combine two project from the hottest company, React.js and Material Design lite")
 									)
-								), 
-								React.createElement(MDL.CardAction, {border: true}, 
-									React.createElement(MDL.Button, {type: "FlatButton", 
-										isRipple: true, 
-										isPrimary: true
-									}, 
-										"READ OUR FEATURES"
-									), 
-									React.createElement("br", null)
-								), 
-								React.createElement(MDL.CardMenu, {style: menuStyle}, 
-									React.createElement(MDL.Button, {type: "IconButton", 
-										isRipple: true, 
-										isMini: true, 
-										isPrimary: true
-									}, 
-										React.createElement("i", {style: iconStyle, className: "material-icons"}, "more_vert")
-									), 
-									React.createElement("br", null)
 								)
 							)
 						), 
 
-						"//  Fourth card", 
-						React.createElement("section", {style: sectionStyle}, 
-							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
-								React.createElement(MDL.CardSupportingText, null, 
-									React.createElement("h4", null, "Crew Name"), 
-									React.createElement(MDL.Grid, {style: gridStyle}, 
-										React.createElement(MDL.GridCell, {col: 2, style: gridTwoStyle}, "Picture"), 
-										React.createElement(MDL.GridCell, {col: 10, style: gridTenStyle}, "content")
-									)
-								), 
-								React.createElement(MDL.CardAction, {border: true}, 
-									
-									React.createElement(MDL.Grid, {style: gridStyle}, 
-										React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
+						React.createElement("div", {className: "section", id: "section3", style: crewInfoStyle}, 
+							React.createElement("h3", {style: section3H3Style}, "Team"), 
+							React.createElement("section", {style: sectionStyle}, 
+								React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+									React.createElement(MDL.CardTitle, {height: "350", style: crewOneStyle}, 
+										"xpsteven"
+									), 
+									React.createElement(MDL.CardSupportingText, null, 
+										React.createElement("h4", null, "職稱"), 
+										React.createElement("p", null, "內容")
+									), 
+									React.createElement(MDL.CardAction, {border: true}, 
+										React.createElement("a", {href: "https://github.com/xpsteven"}, 
 											React.createElement(MDL.Button, {type: "FlatButton", 
 												isRipple: true, 
-												isPrimary: true
+												isPrimary: true, 
+												isMini: true, 
+												isAccent: false, 
+												isDisabled: false
 											}, 
-												"Social icon"
-											)
-										), 
-										React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
-											React.createElement(MDL.Button, {type: "FlatButton", 
-												isRipple: true, 
-												isPrimary: true
-											}, 
-												"Social icon"
-											)
-										), 
-										React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
-											React.createElement(MDL.Button, {type: "FlatButton", 
-												isRipple: true, 
-												isPrimary: true
-											}, 
-												"Social icon"
+												"GITHUB"
 											)
 										)
 									)
-								), 
-								React.createElement(MDL.CardMenu, {style: menuStyle}, 
-									React.createElement(MDL.Button, {type: "IconButton", 
-										isRipple: true, 
-										isMini: true, 
-										isPrimary: true
-									}, 
-										React.createElement("i", {style: iconStyle, className: "material-icons"}, "more_vert")
-									), 
-									React.createElement("br", null)
 								)
-							)
-						), 
-
-						"//  Fivth card", 
-						React.createElement("section", {style: sectionStyle}, 
-							React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
-								React.createElement(MDL.CardTitle, {height: "176", style: titleStyle}, 
-									"Crew Name"
-								), 
-								React.createElement(MDL.CardSupportingText, null, 
-									"職稱 內容"
-								), 
-								React.createElement(MDL.CardAction, {border: true}, 
-									React.createElement(MDL.Button, {type: "FlatButton", 
-										isRipple: true, 
-										isPrimary: true
-									}, 
-										"Social icon"
+							), 
+							React.createElement("section", {style: sectionStyle}, 
+								React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+									React.createElement(MDL.CardTitle, {height: "350", style: crewTwoStyle}, 
+										"terence223"
 									), 
-									React.createElement("br", null)
-								)
-							)
-						), 
-
-						"// Sixth Card", 
-						React.createElement("section", {style: sectionStyle}, 
-							React.createElement(MDL.Grid, {style: gridStyle}, 
-								React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
-								"Picture"
-								), 
-
-								React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, 
-									React.createElement(MDL.Card, {width: "100%", shadow: 6, style: sectionStyle}, 
-										React.createElement(MDL.CardSupportingText, null, 
-											React.createElement("h5", null, "Crew Name"), 
-											React.createElement("p", null, "content")
-										), 
-										React.createElement(MDL.CardAction, {border: true}, 
+									React.createElement(MDL.CardSupportingText, null, 
+										React.createElement("h4", null, "職稱"), 
+										React.createElement("p", null, "內容")
+									), 
+									React.createElement(MDL.CardAction, {border: true}, 
+										React.createElement("a", {href: "https://github.com/terence223"}, 
 											React.createElement(MDL.Button, {type: "FlatButton", 
 												isRipple: true, 
-												isPrimary: true
+												isPrimary: true, 
+												isMini: true, 
+												isAccent: false, 
+												isDisabled: false
 											}, 
-												"Social icon"
-											), 
-											React.createElement("br", null)
+												"GITHUB"
+											)
+										)
+									)
+								)
+							), 
+							React.createElement("section", {style: sectionStyle}, 
+								React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+									React.createElement(MDL.CardTitle, {height: "350", style: crewThreeStyle}, 
+										"seal789ie"
+									), 
+									React.createElement(MDL.CardSupportingText, null, 
+										React.createElement("h4", null, "職稱"), 
+										React.createElement("p", null, "內容")
+									), 
+									React.createElement(MDL.CardAction, {border: true}, 
+										React.createElement("a", {href: "https://github.com/seal789ie"}, 
+											React.createElement(MDL.Button, {type: "FlatButton", 
+												isRipple: true, 
+												isPrimary: true, 
+												isMini: true, 
+												isAccent: false, 
+												isDisabled: false
+											}, 
+												"GITHUB"
+											)
+										)
+									)
+								)
+							), 
+							React.createElement("section", {style: sectionStyle}, 
+								React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+									React.createElement(MDL.CardTitle, {height: "350", style: crewFourStyle}, 
+										"EmilyWen"
+									), 
+									React.createElement(MDL.CardSupportingText, null, 
+										React.createElement("h4", null, "職稱"), 
+										React.createElement("p", null, "內容")
+									), 
+									React.createElement(MDL.CardAction, {border: true}, 
+										React.createElement("a", {href: "https://github.com/EmilyWen"}, 
+											React.createElement(MDL.Button, {type: "FlatButton", 
+												isRipple: true, 
+												isPrimary: true, 
+												isMini: true, 
+												isAccent: false, 
+												isDisabled: false
+											}, 
+												"GITHUB"
+											)
+										)
+									)
+								)
+							), 
+							React.createElement("section", {style: sectionStyle}, 
+								React.createElement(MDL.Card, {width: "512", shadow: 6, style: sectionStyle}, 
+									React.createElement(MDL.CardTitle, {height: "350", style: crewFiveStyle}, 
+										"Heng-xiu"
+									), 
+									React.createElement(MDL.CardSupportingText, null, 
+										React.createElement("h4", null, "職稱"), 
+										React.createElement("p", null, "內容")
+									), 
+									React.createElement(MDL.CardAction, {border: true}, 
+										React.createElement("a", {href: "https://github.com/Heng-xiu"}, 
+											React.createElement(MDL.Button, {type: "FlatButton", 
+												isRipple: true, 
+												isPrimary: true, 
+												isMini: true, 
+												isAccent: false, 
+												isDisabled: false
+											}, 
+												"GITHUB"
+											)
 										)
 									)
 								)
 							)
 						)
 					), 
-					"// Introduce key part 1.From MDL 2.Combine react 3.it free", 
-					React.createElement(MDL.Grid, {style: gridStyle}, 
-						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
-							React.createElement("h5", null, "title"), 
-							React.createElement("p", null, "context")
-						), 
-						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
-							React.createElement("h5", null, "title"), 
-							React.createElement("p", null, "context")
-						), 
-						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, 
-							React.createElement("h5", null, "title"), 
-							React.createElement("p", null, "context")
-						)
-					), 
-					"// Introduce feature",  
-					React.createElement(MDL.Grid, {style: gridStyle}, 
-						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, "Picture"), 
-						React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, "content")
-					), 
-					React.createElement(MDL.Grid, {style: gridStyle}, 
-						React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, "content"), 
-						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, "Picture")
-					), 
-					React.createElement(MDL.Grid, {style: gridStyle}, 
-						React.createElement(MDL.GridCell, {col: 4, style: gridFourStyle}, "Picture"), 
-						React.createElement(MDL.GridCell, {col: 8, style: gridEnightStyle}, "content")
-					), 
+
+
 					React.createElement(MDL.MiniFooter, {
 						leftSection: leftSection, 
 						rightSection: rightSection}
+					), 
+
+					React.createElement("a", {href: "#section1"}, 
+						React.createElement(MDL.Button, {type: "FloatingActionButton", isPrimary: true, style: feedBack}, 
+							React.createElement("button", null, 
+								React.createElement("i", {className: "material-icons"}, "keyboard_arrow_up")
+							)
+						)
 					)
+
 				)
+
 			)
 		);
 	}
