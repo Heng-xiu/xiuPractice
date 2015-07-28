@@ -4,6 +4,8 @@ var MDL = require('mdl-react');
 
 var HelloMessage = React.createClass({displayName: "HelloMessage",
 
+	
+
 	render: function() {
 
 		// Layout head link
@@ -11,6 +13,7 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 			React.createElement("a", {href: "#section1"}, "HOME"),
 			React.createElement("a", {href: "#section2"}, "FEATURE"),
 			React.createElement("a", {href: "#section3"}, "TEAM"),
+			React.createElement("a", {href: "#section4"}, "CONTACT US"),
 		];
 
 		// Footer 
@@ -191,6 +194,36 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 			lineHeight: '40px',
 			// margin: '20% 0 20%',
 		};
+		// section4
+		var section4Style = {
+			position: 'center',
+			textAlign: 'center',
+			backgroundColor: '#B0BEC5',
+		};
+
+		var section4H3Style = {
+			margin: '5% 0% 0% 0%',
+			color: '#ffffff'
+		}
+
+		var section4PStyle = {
+			fontSize: '36px',
+			margin: '0% 0% 10% 0%',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+		};
+
+		var section4Btn = {
+			margin: '0 0 0 45%',
+		}
+
+		// mapStyle
+		var mapStyle = {
+			width: '100%',
+			height: '80%',
+			backgroundColor: '#C2C2C2',
+			position: 'center',
+		};
 
 		return (
 			React.createElement("div", null, 
@@ -369,6 +402,31 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 						)
 					), 
 
+					React.createElement("div", {className: "section", id: "section4", style: section4Style}, 
+						React.createElement("section", {style: sectionStyle}, 
+						React.createElement("h3", {style: section4H3Style}, "CONTACT US"), 
+						React.createElement(MDL.TextField, {
+							labelText: "Name", 
+							isFloatingLabel: true, 
+							onChange: this.onChange}
+						), React.createElement("br", null), 
+						React.createElement(MDL.TextField, {
+							labelText: "Email", 
+							isFloatingLabel: true}
+						), React.createElement("br", null), 
+						React.createElement(MDL.TextField, {
+							labelText: "Message", 
+							isFloatingLabel: true}
+						), React.createElement("br", null), 
+						React.createElement(MDL.Button, {type: "RaisedButton", isPrimary: true, style: section4Btn}, 
+							"SUBMIT"
+						)
+						)
+					), 
+
+					React.createElement("div", {className: "section", id: "section5"}, 
+						React.createElement("div", {id: "map-canvas", style: mapStyle})
+					), 
 
 					React.createElement(MDL.MiniFooter, {
 						leftSection: leftSection, 

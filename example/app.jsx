@@ -3,6 +3,8 @@ var MDL = require('mdl-react');
 
 var HelloMessage = React.createClass({
 
+	
+
 	render: function() {
 
 		// Layout head link
@@ -10,6 +12,7 @@ var HelloMessage = React.createClass({
 			<a href='#section1' >HOME</a>,
 			<a href='#section2' >FEATURE</a>,
 			<a href='#section3' >TEAM</a>,
+			<a href='#section4' >CONTACT US</a>,
 		];
 
 		// Footer 
@@ -190,6 +193,36 @@ var HelloMessage = React.createClass({
 			lineHeight: '40px',
 			// margin: '20% 0 20%',
 		};
+		// section4
+		var section4Style = {
+			position: 'center',
+			textAlign: 'center',
+			backgroundColor: '#B0BEC5',
+		};
+
+		var section4H3Style = {
+			margin: '5% 0% 0% 0%',
+			color: '#ffffff'
+		}
+
+		var section4PStyle = {
+			fontSize: '36px',
+			margin: '0% 0% 10% 0%',
+			textAlign: 'center',
+			fontFamily: 'Roboto',
+		};
+
+		var section4Btn = {
+			margin: '0 0 0 45%',
+		}
+
+		// mapStyle
+		var mapStyle = {
+			width: '100%',
+			height: '80%',
+			backgroundColor: '#C2C2C2',
+			position: 'center',
+		};
 
 		return (
 			<div >
@@ -368,6 +401,31 @@ var HelloMessage = React.createClass({
 						</div>
 					</div>
 
+					<div className="section" id="section4" style={section4Style}>
+						<section style={sectionStyle}>
+						<h3 style={section4H3Style}>CONTACT US</h3>
+						<MDL.TextField
+							labelText='Name'
+							isFloatingLabel={true}
+							onChange={this.onChange}
+						/><br />
+						<MDL.TextField
+							labelText='Email'
+							isFloatingLabel={true}
+						/><br />
+						<MDL.TextField
+							labelText='Message'
+							isFloatingLabel={true}
+						/><br />
+						<MDL.Button type="RaisedButton" isPrimary={true} style={section4Btn}>
+							SUBMIT
+						</MDL.Button>
+						</section >
+					</div>
+
+					<div className="section" id="section5" >
+						<div id="map-canvas" style={mapStyle}></div>
+					</div>
 
 					<MDL.MiniFooter
 						leftSection={leftSection}
