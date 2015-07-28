@@ -1,3 +1,6 @@
+
+"use strict"
+
 var React = require("react");
 var MDL = require('mdl-react');
 
@@ -252,14 +255,12 @@ var HelloMessage = React.createClass({
 
 		return (
 			<div >
-
 				<MDL.Layout
 					title='Fixed tabs'
 					href='#'
 					headerLinks={headLinks}
 					drawerLinks={headLinks}
 				>
-
 					<div id="fullpage'">
 
 						<div className="section active" id="section1" style={headerStyle} >
@@ -455,12 +456,10 @@ var HelloMessage = React.createClass({
 					<div className="section" id="section5" >
 						<div id="map-canvas" style={mapStyle}></div>
 					</div>
-
 					<MDL.MiniFooter
 						leftSection={leftSection}
 						rightSection={rightSection}
 					/>
-
 					<a href="#section1">
 						<MDL.Button type="FloatingActionButton" isPrimary={true} style={feedBack}>
 							<button>
@@ -468,9 +467,7 @@ var HelloMessage = React.createClass({
 							</button>
 						</MDL.Button>
 					</a>
-
 				</MDL.Layout>
-
 			</div>
 		);
 	},

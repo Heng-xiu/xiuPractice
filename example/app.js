@@ -1,4 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
+"use strict"
+
 var React = require("react");
 var MDL = require('mdl-react');
 
@@ -253,14 +256,12 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 
 		return (
 			React.createElement("div", null, 
-
 				React.createElement(MDL.Layout, {
 					title: "Fixed tabs", 
 					href: "#", 
 					headerLinks: headLinks, 
 					drawerLinks: headLinks
 				}, 
-
 					React.createElement("div", {id: "fullpage'"}, 
 
 						React.createElement("div", {className: "section active", id: "section1", style: headerStyle}, 
@@ -456,12 +457,10 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 					React.createElement("div", {className: "section", id: "section5"}, 
 						React.createElement("div", {id: "map-canvas", style: mapStyle})
 					), 
-
 					React.createElement(MDL.MiniFooter, {
 						leftSection: leftSection, 
 						rightSection: rightSection}
 					), 
-
 					React.createElement("a", {href: "#section1"}, 
 						React.createElement(MDL.Button, {type: "FloatingActionButton", isPrimary: true, style: feedBack}, 
 							React.createElement("button", null, 
@@ -469,9 +468,7 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 							)
 						)
 					)
-
 				)
-
 			)
 		);
 	},
