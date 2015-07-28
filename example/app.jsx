@@ -3,19 +3,35 @@ var MDL = require('mdl-react');
 
 var HelloMessage = React.createClass({
 
-	_getName: function() {
-
+	getInitialState: function() {
+		return {
+			name: '',
+			email: '',
+			message: '',
+		};
 	},
 
-	_getEmail: function() {
-
+	_getName: function(name, e) {
+		var change = {};
+		change[name] = e.target.value;
+		this.setState(change);
 	},
 
-	_getMessage: function() {
+	_getEmail: function(event) {
+		this.setState({
+			email: event.target.value,
+		});
+	},
 
+	_getMessage: function(event) {
+		this.setState({
+			message: event.target.value,
+		});
 	},
 
 	render: function() {
+
+		console.log('render');
 
 		// Layout head link
 		var headLinks = [
@@ -417,15 +433,18 @@ var HelloMessage = React.createClass({
 						<MDL.TextField
 							labelText='Name'
 							isFloatingLabel={true}
-							onChange={this.onChange}
+							value={this.state.name}
+							onChange={this._getName.bind(this, 'name')}
 						/><br />
 						<MDL.TextField
 							labelText='Email'
 							isFloatingLabel={true}
+							onChange={this._getEmail}
 						/><br />
 						<MDL.TextField
 							labelText='Message'
 							isFloatingLabel={true}
+							onChange={this._getMessage}
 						/><br />
 						<MDL.Button type="RaisedButton" isPrimary={true} style={section4Btn}>
 							SUBMIT
@@ -454,7 +473,7 @@ var HelloMessage = React.createClass({
 
 			</div>
 		);
-	}
+	},
 });
 
 React.render(<HelloMessage />, document.body);
