@@ -3,7 +3,17 @@ var MDL = require('mdl-react');
 
 var HelloMessage = React.createClass({
 
-	
+	_getName: function() {
+
+	},
+
+	_getEmail: function() {
+
+	},
+
+	_getMessage: function() {
+
+	},
 
 	render: function() {
 
