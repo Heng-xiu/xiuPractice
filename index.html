@@ -9,19 +9,19 @@
 		<meta name="keywords"  content="mdl-react,mdl,react,fandora"/>
 		<!-- Add MDL script and stylesheet -->
 		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
-		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+		<script type="text/javascript src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<!-- Add jQuery -->
 		<script src="/xiuPractice/example/js/jquery-1.11.3.min.js"></script>
 		<!-- Add google Map -->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9i46ZzKNZotasaQ73I45aRo9kr7GJ7RM"></script>
+		<script type="text/javascript src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-TztMOWtScy9UFbe-frslPYNLts1xH3E"></script>
 		<!-- Add awesome font -->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<!-- Add full-page.js -->
 		<link rel="stylesheet" href="/xiuPractice/example/css/jquery.fullPage.css">
-		<script src="/xiuPractice/example/js/jquery.fullPage.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/vendors/jquery.easings.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/vendors/jquery.slimscroll.js"></script>
+		<script type="text/javascript src="/xiuPractice/example/js/jquery.fullPage.js"></script>
+		<script type="text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/vendors/jquery.easings.min.js"></script>
+		<script type="text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/vendors/jquery.slimscroll.js"></script>
 		<script type="text/javascript">
 				$(document).ready(function() {
 					$('#fullpage').fullpage({
@@ -53,8 +53,8 @@
 					title: 'Fandora shop',
 					cursor: 'Fandora shop',
 				});
+				google.maps.event.addDomListener(window, 'load', initialize);
 			}
-			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 	</head>
 	<body>
