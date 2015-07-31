@@ -426,37 +426,38 @@ var HelloMessage = React.createClass({displayName: "HelloMessage",
 									)
 								)
 							)
+						), 
+
+						React.createElement("div", {className: "section", id: "section4", style: section4Style}, 
+							React.createElement("section", {style: sectionStyle}, 
+							React.createElement("h3", {style: section4H3Style}, "CONTACT US"), 
+							React.createElement(MDL.TextField, {
+								labelText: "Name", 
+								isFloatingLabel: true, 
+								value: this.state.name, 
+								onChange: this._getName.bind(this, 'name')}
+							), React.createElement("br", null), 
+							React.createElement(MDL.TextField, {
+								labelText: "Email", 
+								isFloatingLabel: true, 
+								onChange: this._getEmail}
+							), React.createElement("br", null), 
+							React.createElement(MDL.TextField, {
+								labelText: "Message", 
+								isFloatingLabel: true, 
+								onChange: this._getMessage}
+							), React.createElement("br", null), 
+							React.createElement(MDL.Button, {type: "RaisedButton", isPrimary: true, style: section4Btn}, 
+								"SUBMIT"
+							)
+							)
+						), 
+
+						React.createElement("div", {className: "section", id: "section5"}, 
+							React.createElement("div", {id: "map-canvas", style: mapStyle})
 						)
 					), 
 
-					React.createElement("div", {className: "section", id: "section4", style: section4Style}, 
-						React.createElement("section", {style: sectionStyle}, 
-						React.createElement("h3", {style: section4H3Style}, "CONTACT US"), 
-						React.createElement(MDL.TextField, {
-							labelText: "Name", 
-							isFloatingLabel: true, 
-							value: this.state.name, 
-							onChange: this._getName.bind(this, 'name')}
-						), React.createElement("br", null), 
-						React.createElement(MDL.TextField, {
-							labelText: "Email", 
-							isFloatingLabel: true, 
-							onChange: this._getEmail}
-						), React.createElement("br", null), 
-						React.createElement(MDL.TextField, {
-							labelText: "Message", 
-							isFloatingLabel: true, 
-							onChange: this._getMessage}
-						), React.createElement("br", null), 
-						React.createElement(MDL.Button, {type: "RaisedButton", isPrimary: true, style: section4Btn}, 
-							"SUBMIT"
-						)
-						)
-					), 
-
-					React.createElement("div", {className: "section", id: "section5"}, 
-						React.createElement("div", {id: "map-canvas", style: mapStyle})
-					), 
 					React.createElement(MDL.MiniFooter, {
 						leftSection: leftSection, 
 						rightSection: rightSection}

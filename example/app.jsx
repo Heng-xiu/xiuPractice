@@ -426,36 +426,37 @@ var HelloMessage = React.createClass({
 								</MDL.Card>
 							</section>
 						</div>
+
+						<div className="section" id="section4" style={section4Style}>
+							<section style={sectionStyle}>
+							<h3 style={section4H3Style}>CONTACT US</h3>
+							<MDL.TextField
+								labelText='Name'
+								isFloatingLabel={true}
+								value={this.state.name}
+								onChange={this._getName.bind(this, 'name')}
+							/><br />
+							<MDL.TextField
+								labelText='Email'
+								isFloatingLabel={true}
+								onChange={this._getEmail}
+							/><br />
+							<MDL.TextField
+								labelText='Message'
+								isFloatingLabel={true}
+								onChange={this._getMessage}
+							/><br />
+							<MDL.Button type="RaisedButton" isPrimary={true} style={section4Btn}>
+								SUBMIT
+							</MDL.Button>
+							</section >
+						</div>
+
+						<div className="section" id="section5" >
+							<div id="map-canvas" style={mapStyle}></div>
+						</div>
 					</div>
 
-					<div className="section" id="section4" style={section4Style}>
-						<section style={sectionStyle}>
-						<h3 style={section4H3Style}>CONTACT US</h3>
-						<MDL.TextField
-							labelText='Name'
-							isFloatingLabel={true}
-							value={this.state.name}
-							onChange={this._getName.bind(this, 'name')}
-						/><br />
-						<MDL.TextField
-							labelText='Email'
-							isFloatingLabel={true}
-							onChange={this._getEmail}
-						/><br />
-						<MDL.TextField
-							labelText='Message'
-							isFloatingLabel={true}
-							onChange={this._getMessage}
-						/><br />
-						<MDL.Button type="RaisedButton" isPrimary={true} style={section4Btn}>
-							SUBMIT
-						</MDL.Button>
-						</section >
-					</div>
-
-					<div className="section" id="section5" >
-						<div id="map-canvas" style={mapStyle}></div>
-					</div>
 					<MDL.MiniFooter
 						leftSection={leftSection}
 						rightSection={rightSection}
